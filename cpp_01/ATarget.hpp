@@ -12,20 +12,14 @@ class ATarget {
        
 	    public:
 
-			ATarget() {};
-			virtual ~ATarget() {};
-			ATarget(ATarget const & src) : _type(src._type) {};
+			ATarget();
+			virtual ~ATarget();
+			ATarget(ATarget const & src);
+			ATarget(std::string type);
 
-			ATarget(std::string type) : _type(type) {};
+			ATarget & operator=(ATarget const & other);
 
-			ATarget & operator=(ATarget const & other) {
-				_type = other.getType();
-				return *this;
-            };
-
-			std::string	const &	getType(void) const {
-				return _type;
-			};
+			std::string	const &	getType(void) const;
 
 			virtual ATarget * clone(void) const = 0;
 
@@ -37,4 +31,3 @@ class ATarget {
 };
 
 #endif
-

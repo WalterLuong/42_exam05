@@ -11,18 +11,21 @@
 class Warlock 
 {
 	public:
-		typedef typename std::pair<std::string, ASpell *>	Spell;
-		typedef typename std::map<std::string, ASpell *>	Spellbook;
-		typedef typename Spellbook::iterator				Iterator;
+		typedef std::pair<std::string, ASpell *>	Spell;
+		typedef std::map<std::string, ASpell *>		Sbook;
+		typedef Sbook::iterator						Iterator;
 
 	public :
 
 		Warlock(std::string name, std::string title);
 		~Warlock(void);
+
 		std::string	const &	getName(void) const;
-		std::string		const & getTitle(void) const;
+		std::string	const & getTitle(void) const;
 		void	setTitle(std::string newTitle);
+
 		void	introduce() const;
+
 		void	learnSpell(ASpell * spell);
 		void	forgetSpell(std::string spell);
 		void	launchSpell(std::string const & spell, ATarget const & target);
@@ -31,7 +34,7 @@ class Warlock
 
 		std::string _name;
 		std::string _title;
-		Spellbook	_stuff;
+		Sbook	_stuff;
 
 		Warlock();
 		Warlock(Warlock const & src);

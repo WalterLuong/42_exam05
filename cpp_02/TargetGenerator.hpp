@@ -11,18 +11,19 @@ public:
 
 		typedef typename std::pair<std::string, ATarget *>	Spell;
 		typedef typename std::map<std::string, ATarget *>	TargetG;
-		typedef typename TargetG::iterator				Iterator;
+		typedef typename TargetG::iterator					Iterator;
 
-		TargetGenerator() {};
-		~TargetGenerator() {};
+		TargetGenerator();
+		~TargetGenerator();
+
 		void	learnTargetType(ATarget * target);
 		void	forgetTargetType(std::string const & target);
 		ATarget * createTarget(std::string const & target);
 
-		TargetG	_stuff;
 
 	private :
 
+		TargetG	_stuff;
 
 		TargetGenerator(TargetGenerator const & src );
 		TargetGenerator & operator=(TargetGenerator const & other);

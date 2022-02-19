@@ -11,12 +11,9 @@ class Dummy : public ATarget {
 
 	public:
 
-		Dummy() : ATarget("Target Practice Dummy") {};
-		virtual ~Dummy() {};
-		virtual ATarget * clone(void) const {
-		Dummy *d = new Dummy();
-		return d;
-		};
+		Dummy();
+		virtual ~Dummy();
+		virtual ATarget * clone(void) const;
 };
 
 #endif

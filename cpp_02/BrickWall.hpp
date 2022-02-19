@@ -11,12 +11,10 @@ class BrickWall : public ATarget {
 
 	public:
 
-		BrickWall() : ATarget("Inconspicuous Red-brick Wall") {};
-		virtual ~BrickWall() {};
-		virtual ATarget * clone(void) const {
-		BrickWall *d = new BrickWall();
-		return d;
-		};
+		BrickWall();
+		virtual ~BrickWall();
+		
+		virtual ATarget * clone(void) const;
 };
 
 #endif

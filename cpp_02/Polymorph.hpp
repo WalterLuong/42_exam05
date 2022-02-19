@@ -11,12 +11,10 @@ class Polymorph : public ASpell {
 
 	public:
 
-		Polymorph() : ASpell("Polymorph", "turned into a critter") {};
-		virtual ~Polymorph() {};
+		Polymorph();
+		virtual ~Polymorph();
 
-		virtual ASpell * clone(void) const {
-			return new Polymorph();
-		};
+		virtual ASpell * clone(void) const;
 };
 
 #endif

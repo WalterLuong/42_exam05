@@ -11,13 +11,10 @@ class Fwoosh : public ASpell {
 
 	public:
 
-		Fwoosh() : ASpell("Fwoosh", "fwooshed") {};
-		virtual ~Fwoosh() {};
+		Fwoosh();
+		virtual ~Fwoosh();
 
-		virtual ASpell * clone(void) const {
-			return new Fwoosh();
-		};
+		virtual ASpell * clone(void) const;
 };
 
 #endif
-

@@ -11,20 +11,21 @@ class SpellBook {
 
 public:
 
-		typedef typename std::pair<std::string, ASpell *>	Spell;
-		typedef typename std::map<std::string, ASpell *>	Spellbook;
-		typedef typename Spellbook::iterator				Iterator;
+		typedef std::pair<std::string, ASpell *>	Spell;
+		typedef std::map<std::string, ASpell *>		Sbook;
+		typedef Sbook::iterator						Iterator;
 
-		SpellBook() {};
-		~SpellBook() {};
+		SpellBook();
+		~SpellBook();
+		
 		void	learnSpell(ASpell * spell);
 		void	forgetSpell(std::string const & spell);
 		ASpell * createSpell(std::string const & spell);
 
-		Spellbook	_stuff;
 
 	private :
 
+		Sbook	_stuff;
 
 		SpellBook(SpellBook const & src );
 		SpellBook & operator=(SpellBook const & other);

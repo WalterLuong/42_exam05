@@ -12,26 +12,17 @@ class ASpell {
 
 	public:
 
-		ASpell() {};
-		ASpell(ASpell const & src) : _name(src._name), _effects(src._effects) {};
-		ASpell(std::string name, std::string effects) : _name(name), _effects(effects) {};
-		virtual ~ASpell() {};
-		ASpell & operator=(ASpell const & other) {
-				_name = other.getName();
-				_effects = other.getEffects();
-				return *this;
-		};
+		ASpell();
+		ASpell(ASpell const & src);
+		ASpell(std::string name, std::string effects);
+		virtual ~ASpell();
 
-		std::string	const &	getName(void) const {
-				return _name;
-		};
+		ASpell & operator=(ASpell const & other);
 
-		std::string	const &	getEffects(void) const {
-				return _effects;
-		};
+		std::string	const &	getName(void) const;
+		std::string	const &	getEffects(void) const;
 
 		virtual ASpell * clone(void) const = 0;
-
 		void	launch(ATarget const & target) const;
 
 	private:

@@ -16,9 +16,11 @@ class Warlock
 
 		Warlock(std::string name, std::string title);
 		~Warlock(void);
+
 		std::string	const &	getName(void) const;
 		std::string		const & getTitle(void) const;
 		void	setTitle(std::string newTitle);
+	
 		void	introduce() const;
 		void	learnSpell(ASpell * spell);
 		void	forgetSpell(std::string spell);
