@@ -35,8 +35,8 @@ void	Warlock::forgetSpell(std::string spell) {
 }
 
 void	Warlock::launchSpell(std::string const & spell, ATarget const & target) {
-	ASpell * it = _book->createSpell(spell);
-	if (it) {
-		it->launch(target);
+	ASpell * sort = _book->createSpell(spell);
+	if (sort) {
+		sort->launch(target);
 	}
 }

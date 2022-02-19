@@ -9,9 +9,9 @@ class TargetGenerator {
 
 public:
 
-		typedef typename std::pair<std::string, ATarget *>	Spell;
-		typedef typename std::map<std::string, ATarget *>	TargetG;
-		typedef typename TargetG::iterator					Iterator;
+		typedef std::pair<std::string, ATarget *>	Spell;
+		typedef std::map<std::string, ATarget *>	TargetG;
+		typedef TargetG::iterator					Iterator;
 
 		TargetGenerator();
 		~TargetGenerator();
